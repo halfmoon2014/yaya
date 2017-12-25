@@ -12,9 +12,9 @@ namespace WebHelp
     {
         private static Certification instance ;
         private static object _lock = new object();
-        private static Dictionary<string, string> certifier = new Dictionary<string, string>();
+        private static Dictionary<string, object> certifier = new Dictionary<string, object>();
 
-        public static Dictionary<string, string> Certifier
+        public static Dictionary<string, object> Certifier
         {
             get
             {

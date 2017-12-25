@@ -18,7 +18,7 @@ public class indexHandler : IHttpHandler
         MessageContentStc<User> messageContentStc = JsonConvert.DeserializeObject<MessageContentStc<User>>(repose);//反序列化
         if (messageContentStc.Errcode == 0)
         {
-            context.Response.Cookies["__hk"].Value = Authenticator.Login(messageContentStc.Data);
+            context.Response.Cookies["__hk"].Value = Authenticator.Login(messageContentStc.Data);            
             context.Response.Redirect("../main/main.html");
         }
         else

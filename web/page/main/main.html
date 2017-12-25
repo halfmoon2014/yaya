@@ -13,7 +13,7 @@
 
     <!-- Bootstrap core CSS -->
     
-     <link href="../../bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
@@ -47,10 +47,10 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">首页</a></li>
               <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">业务模块 <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">生产模块 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="#">挂镀</a></li>
-                      <li><a href="#">滚镀</a></li>                      
+                      <li><a href="#">挂镀车间</a></li>
+                      <li><a href="#">滚镀车间</a></li>                      
                   </ul>
               </li>
             <li class="dropdown">
@@ -68,7 +68,7 @@
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">基础档案 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="#">客户档案</a></li>
+                      <li><a href="../customer/customer.html">客户档案</a></li>
                       <li><a href="#">供应商档案</a></li>
                       <li><a href="#">产品型号</a></li>                      
                       <li><a href="#">颜色库</a></li>                      
@@ -84,7 +84,7 @@
               </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">用户名</a></li>
+            <li><a href="#" fill="fullname"></a></li>
             <li><a href="#" onclick="exit()">注销</a></li>
             
           </ul>
@@ -113,7 +113,8 @@
       <script src="../../bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    
+    <script src="../../assets/js/common.js"></script>
+    <script src="../../assets/js/json2.js"></script>
   </body>
 </html>
 <script type="text/javascript">
@@ -122,4 +123,19 @@
         //todo
         //删掉cookie,返回登陆或退出
     }
+    $(document).ready(function () {
+        comn.webinit(function (result) {
+            if (typeof result == "object") {//
+                if (result.Errcode > 0) {
+                    alert(result.Errmsg)
+                } else {
+                    $("[fill='fullname']").html(result.Data.fullname);
+                }
+
+            } else if (typeof result == "string") {//有错误
+                alert(result);
+            }
+        });
+    });
+  
 </script>
