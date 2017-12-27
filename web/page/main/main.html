@@ -85,7 +85,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" fill="fullname"></a></li>
-            <li><a href="#" onclick="exit()">注销</a></li>
+            <li><a href="#" fill="exit">注销</a></li>
             
           </ul>
         </div><!--/.nav-collapse -->
@@ -112,30 +112,7 @@
     
       <script src="../../bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../../assets/js/common.js"></script>
-    <script src="../../assets/js/json2.js"></script>
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>      
+    <script data-main="main"  src="../../assets/js/require.js" defer async="true"></script>    
   </body>
 </html>
-<script type="text/javascript">
-    //注销
-    function exit() {
-        //todo
-        //删掉cookie,返回登陆或退出
-    }
-    $(document).ready(function () {
-        comn.webinit(function (result) {
-            if (typeof result == "object") {//
-                if (result.Errcode > 0) {
-                    alert(result.Errmsg)
-                } else {
-                    $("[fill='fullname']").html(result.Data.fullname);
-                }
-
-            } else if (typeof result == "string") {//有错误
-                alert(result);
-            }
-        });
-    });
-  
-</script>
