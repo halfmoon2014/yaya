@@ -19,11 +19,11 @@ public class indexHandler : IHttpHandler
         if (messageContentStc.Errcode == 0)
         {
             context.Response.Cookies["__hk"].Value = Authenticator.Login(messageContentStc.Data);            
-            context.Response.Redirect("../main/main.html");
+            context.Response.Redirect("../page/main");
         }
         else
         {
-            context.Response.Redirect("../../index.html");
+            context.Response.Redirect("../index.html");
         }
     }
     public bool IsReusable
