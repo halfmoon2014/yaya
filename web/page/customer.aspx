@@ -20,8 +20,8 @@
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
-
+    
+    <link href="../assets/css/customer/sticky-footer-navbar.css" rel="stylesheet" />
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
@@ -102,6 +102,6 @@
     <script src="../../bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script data-main="customer" src="../../assets/js/require.js" defer async="true"></script>
+    <script data-main="../../assets/js/customer/customer" src="../../assets/js/require.js" defer async="true"></script>
 </body>
 </html>

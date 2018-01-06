@@ -5,19 +5,7 @@
     }
 })
 
-require(["jquery", "common"], function ($, common) { 
-    common.getFullName(function (result) {
-        if (typeof result == "object") {
-            if (result.Errcode > 0) {
-                alert(result.Errmsg)
-            } else {
-                $("[fill='fullname']").html(result.Data.fullname);
-            }
-
-        } else if (typeof result == "string") {//有错误
-            alert(result);
-        }
-    });
+require(["jquery", "common"], function ($, common) {  
     $("[fill='exit']").click(function () {
         //alert(1);
     });

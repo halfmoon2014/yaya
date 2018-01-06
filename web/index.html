@@ -25,17 +25,17 @@
 </head>
 <body>
     <div class="container">
-        <form class="form-signin" action="../service/indexHandler.ashx" method="post" >
+        <form class="form-signin" action="../service/handler/indexHandler" method="post" >
             <h2 class="form-signin-heading">Please sign in</h2>
 
             <label for="inputName" class="sr-only">用户名</label>
             <input type="text" name="inputName" id="inputName" class="form-control" placeholder="用户名" required autofocus>
 
             <label for="inputPassword" class="sr-only">密码</label>
-            <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="密码" required>
+            <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="密码" required>            
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" value="remember-me">记住我的账号
+                    <input type="checkbox" name="chekRememberMe"   value="remember-me">记住我的账号
                 </label>
             </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">登 陆</button>

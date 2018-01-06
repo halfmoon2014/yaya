@@ -63,7 +63,7 @@
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">基础档案 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="../customer/customer.html" target="_blank">客户档案</a></li>
+                      <li><a href="../page/customer" target="_blank">客户档案</a></li>
                       <li><a href="#">供应商档案</a></li>
                       <li><a href="#">产品型号</a></li>                      
                       <li><a href="#">颜色库</a></li>                      
@@ -79,7 +79,7 @@
               </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" fill="fullname"></a></li>
+            <li><a href="#" id="fullname" fill="fullname" runat="server" ></a></li>
             <li><a href="#" fill="exit">注销</a></li>
             
           </ul>

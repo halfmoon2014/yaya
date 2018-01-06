@@ -6,7 +6,7 @@
 })
 
 require(["jquery", "common"], function ($, common) {
-    common.pageInit();
+    //common.pageInit();
     //console.log("当js加载成功后会执行的函数");
 
 }, function () {

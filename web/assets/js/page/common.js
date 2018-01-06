@@ -11,31 +11,31 @@
     }
 })
 define(['jquery', 'json2', 'utils'], function ($, JSON, utils) {
-    var getFullName = function (call) {
-        var hk = utils.getCookie("__hk");
-        var method = "webinit";
-        $.ajax({
-            type: "POST",
-            async: true,
-            contentType: "application/x-www-form-urlencoded; charset=utf-8",
-            url: "../../service/mainHandler.ashx",
-            data: { method: method, hk: hk },
-            success: function (result) {
-                if (typeof call == "function") {
-                    call(JSON.parse(result));
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                if (typeof call == "function") {
-                    call(textStatus);
-                }
-            }
-        }); //ajax end
-    };
+    //var getFullName = function (call) {
+    //    var hk = utils.getCookie("__hk");
+    //    var method = "webinit";
+    //    $.ajax({
+    //        type: "POST",
+    //        async: true,
+    //        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+    //        url: "../../service/handler/mainHandler.ashx",
+    //        data: { method: method, hk: hk },
+    //        success: function (result) {
+    //            if (typeof call == "function") {
+    //                call(JSON.parse(result));
+    //            }
+    //        },
+    //        error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //            if (typeof call == "function") {
+    //                call(textStatus);
+    //            }
+    //        }
+    //    }); //ajax end
+    //};
     var pageInit = function (call) {
         showLoading();
-        getFullName(addFooterNavbar)        
-        
+        //getFullName(addFooterNavbar)        
+
     }
     //增加顶部导航和低部注脚
     var addFooterNavbar = function (result) {
@@ -44,11 +44,11 @@ define(['jquery', 'json2', 'utils'], function ($, JSON, utils) {
             if (result.Errcode > 0) {
                 fullname = result.Errmsg;
             } else {
-                fullname=result.Data.fullname;
+                fullname = result.Data.fullname;
             }
 
         } else if (typeof result == "string") {//有错误
-            fullname=result;
+            fullname = result;
         }
 
         var css = "";
@@ -113,7 +113,7 @@ define(['jquery', 'json2', 'utils'], function ($, JSON, utils) {
         $("body").append(footer);
         hideLoading();
     }
-    
+
     //显示遮罩
     var showLoading = function () {
         var spinner = document.createElement("div"); //首先创建一个div
@@ -163,12 +163,11 @@ define(['jquery', 'json2', 'utils'], function ($, JSON, utils) {
     var hideLoading = function () {
         var body = document.getElementsByTagName("body");
         var overlay = document.getElementById("overlay");
-        $(overlay).fadeOut(2000,function () {
+        $(overlay).fadeOut(2000, function () {
             body[0].removeChild(overlay);
-        });        
+        });
     }
     return {
-        getFullName: getFullName,
         pageInit: pageInit,
         showLoading: showLoading,
         hideLoading: hideLoading
