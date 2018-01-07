@@ -47,6 +47,7 @@
     <Compile Include="Certification.cs" />
     <Compile Include="Authenticator.cs" />
     <Compile Include="API.cs" />
+    <Compile Include="Ext.cs" />
     <Compile Include="PageIndex.cs" />
     <Compile Include="PageMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

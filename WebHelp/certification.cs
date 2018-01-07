@@ -27,9 +27,7 @@ namespace WebHelp
             }
         }
 
-        Certification()
-        {
-        }
+        Certification(){}
         public static Certification GetInstance()
         {
             if (instance == null)

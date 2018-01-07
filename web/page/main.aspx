@@ -8,19 +8,17 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="../favicon.ico">
     <title>首页</title>
      
-    <link href="../../bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <!-- Custom styles for this template -->    
+    <link href="../bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> 
+         
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">    
     <link href="../assets/css/main/navbar-fixed-top.css" rel="stylesheet" />
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>    
     <!--[if lt IE 9]>      
-        <script src="../../html5shiv/3.7.3/html5shiv.min.js"></script>      
-        <script src="../../respond.js/1.4.2/respond.min.js"></script>
+        <script src="../html5shiv/3.7.3/html5shiv.min.js"></script>      
+        <script src="../respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
 
@@ -63,7 +61,7 @@
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">基础档案 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="../page/customer" target="_blank">客户档案</a></li>
+                      <li><a href="../page/ext/customer" target="_blank">客户档案</a></li>
                       <li><a href="#">供应商档案</a></li>
                       <li><a href="#">产品型号</a></li>                      
                       <li><a href="#">颜色库</a></li>                      
@@ -79,7 +77,7 @@
               </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" id="fullname" fill="fullname" runat="server" ></a></li>
+            <li><a href="#"><span id="fullname" name="fullname"  runat="server">未登陆</span></a></li>
             <li><a href="#" fill="exit">注销</a></li>
             
           </ul>
@@ -97,11 +95,9 @@
     </div> <!-- /container -->
     
 
-    <script src="../../assets/js/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>    
-    <script src="../../bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>      
-    <script data-main="../../assets/js/main/main"  src="../../assets/js/require.js" defer async="true"></script>    
+    <script src="../assets/js/jquery/1.12.4/jquery.min.js"></script>    
+    <script src="../bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>      
+    <script data-main="../assets/js/main/main"  src="../assets/js/require.js" defer async="true"></script>    
   </body>
 </html>
